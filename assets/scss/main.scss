@@ -1,0 +1,263 @@
+/*=========================== GOOGLE FONTS ==========================*/
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap");
+
+// font-family: 'Titillium Web', sans-serif;
+
+/*=========================== VARIABLES =============================*/
+:root {
+  /*======================= Colors ================================*/
+  --color-primary: rgba(38, 43, 72, 0.92);
+  --color-blue-facebook: #3b5998;
+  --color-blue-twitter: #00aced;
+  --color-blue: #4f77ff;
+  --color-gradient-insta: 45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c,
+    #fd1d1d;
+  --color-dark: #666666;
+  --color-dark-2: #44525f;
+
+  /*======================= Font and Typography ====================*/
+  --body-font: "Titillium Web", sans-serif;
+
+  --small-font-size: 0.875rem;
+  @media screen and (min-width: 48em) {
+    --small-font-size: 1rem;
+  }
+
+  /*======================= Margins ================================*/
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.25rem;
+  --mb-6: 3rem;
+  /*======================== Font wieght=============================*/
+  --font-light: 300;
+  --font-regular: 400;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+}
+
+/*=========================== BASE ===================================*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  background-image: url(../img/computer-1867758_1920-min.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  line-height: 1.6;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+
+/*======================= CSS CLASS ==============================*/
+/*======================= LAYOUT =================================*/
+
+.columns {
+  @media screen and (min-width: 48em) {
+    display: flex;
+    justify-content: center;
+    padding: 10vh 2rem;
+  }
+}
+.container {
+  @media screen and (min-width: 960px) {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*======================= Hero/login ====================================*/
+.login {
+  @media screen and (max-width: 48em) {
+    padding: 4rem 1rem;
+  }
+
+  &__text-content {
+    text-align: center;
+    padding: 2rem;
+  }
+  &__logo {
+    width: 150px;
+    margin: 0 auto;
+    padding: 3rem 0;
+  }
+  &__subtitle {
+    color: white;
+  }
+  &__social-links {
+    padding: 1rem 0;
+    margin-top: var(--mb-2);
+  }
+  &__social-link {
+    @media screen and (max-width: 353px) {
+      display: block;
+      width: 100%;
+      &:not(:last-of-type) {
+        margin-bottom: 1rem;
+      }
+    }
+    .icon-text {
+      display: none;
+    }
+    .icon {
+      padding: 0 1rem;
+    }
+    @media screen and (min-width: 48em) {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      &:not(:last-child) {
+        margin-bottom: var(--mb-3);
+      }
+      .icon-text {
+        display: inline-block;
+        color: white;
+      }
+    }
+
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    &:not(:last-child) {
+      margin-right: var(--mb-2);
+    }
+
+    i {
+      color: white;
+    }
+
+    &:nth-of-type(1) {
+      background-color: var(--color-blue-facebook);
+    }
+    &:nth-of-type(2) {
+      background-color: var(--color-blue-twitter);
+    }
+    &:nth-of-type(3) {
+      background-image: linear-gradient(var(--color-gradient-insta));
+    }
+  }
+
+  &__head {
+    padding: 2rem 0;
+    @media screen and (min-width: 48em) {
+      display: flex;
+      gap: 1rem;
+    }
+    text-align: center;
+    a {
+      @media screen and (max-width: 48em) {
+        &:not(:last-of-type) {
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      width: 100%;
+      display: block;
+      text-transform: uppercase;
+      font-size: var(--small-font-size);
+      font-weight: var(--font-semi-bold);
+      color: var(--color-blue);
+      padding: 0.3rem 0;
+      border-bottom: 2px solid var(--color-dark);
+      &:nth-of-type(1) {
+        border-bottom: 2px solid var(--color-blue);
+      }
+    }
+  }
+
+  &__form {
+    padding: 1rem 0;
+    input:not(input[type="checkbox"]) {
+      font-size: var(--small-font-size);
+      width: 100%;
+      border: none;
+      outline: none;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--color-dark-2);
+      margin-top: 1rem;
+    }
+  }
+  &__password {
+    position: relative;
+  }
+  &__showpass {
+    display: block;
+    position: absolute;
+    top: 1.7rem;
+    right: 0;
+  }
+  &__checkbox {
+    @media screen and (max-width: 320px) {
+      text-align: center;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    display: flex;
+    justify-content: space-between;
+    line-height: 1;
+    padding: 2rem 0.2rem;
+    input[type="checkbox"] {
+      margin-right: var(--mb-1);
+    }
+    &:nth-child(1) {
+      margin-right: auto;
+    }
+  }
+  &__forgot {
+    color: var(--color-blue);
+  }
+}
+
+.col {
+  @media screen and (min-width: 960px) {
+    max-width: 35vw;
+  }
+
+  width: 100%;
+}
+.col-1 {
+  background-color: var(--color-primary);
+}
+.col-2 {
+  background-color: #fff;
+  padding: 1rem 2rem;
+}
+
+/*Button*/
+.button {
+  width: 100%;
+  padding: 0.625rem 1rem;
+  color: #fff;
+  background-color: var(--color-blue);
+  font-size: 1.125rem;
+  border: none;
+  outline: none;
+  border-radius: 0.3rem;
+  transition: 0.3s;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+  &:active {
+    transform: translate(0);
+  }
+}

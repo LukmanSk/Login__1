@@ -1,0 +1,217 @@
+/*=========================== GOOGLE FONTS ==========================*/
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap");
+/*=========================== VARIABLES =============================*/
+:root {
+  /*======================= Colors ================================*/
+  --color-primary: rgba(38, 43, 72, 0.92);
+  --color-blue-facebook: #3b5998;
+  --color-blue-twitter: #00aced;
+  --color-blue: #4f77ff;
+  --color-gradient-insta: 45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c,
+    #fd1d1d;
+  --color-dark: #666666;
+  --color-dark-2: #44525f;
+  /*======================= Font and Typography ====================*/
+  --body-font: "Titillium Web", sans-serif;
+  --small-font-size: 0.875rem;
+  /*======================= Margins ================================*/
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.25rem;
+  --mb-6: 3rem;
+  /*======================== Font wieght=============================*/
+  --font-light: 300;
+  --font-regular: 400;
+  --font-semi-bold: 600;
+  --font-bold: 700; }
+  @media screen and (min-width: 48em) {
+    :root {
+      --small-font-size: 1rem; } }
+
+/*=========================== BASE ===================================*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box; }
+
+body {
+  font-family: var(--body-font);
+  background-image: url(../img/computer-1867758_1920-min.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  line-height: 1.6; }
+
+img {
+  max-width: 100%;
+  display: block; }
+
+a {
+  text-decoration: none; }
+
+/*======================= CSS CLASS ==============================*/
+/*======================= LAYOUT =================================*/
+@media screen and (min-width: 48em) {
+  .columns {
+    display: flex;
+    justify-content: center;
+    padding: 10vh 2rem; } }
+
+@media screen and (min-width: 960px) {
+  .container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto; } }
+
+/*======================= Hero/login ====================================*/
+@media screen and (max-width: 48em) {
+  .login {
+    padding: 4rem 1rem; } }
+
+.login__text-content {
+  text-align: center;
+  padding: 2rem; }
+
+.login__logo {
+  width: 150px;
+  margin: 0 auto;
+  padding: 3rem 0; }
+
+.login__subtitle {
+  color: white; }
+
+.login__social-links {
+  padding: 1rem 0;
+  margin-top: var(--mb-2); }
+
+.login__social-link {
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.3rem;
+  font-size: 1rem; }
+  @media screen and (max-width: 353px) {
+    .login__social-link {
+      display: block;
+      width: 100%; }
+      .login__social-link:not(:last-of-type) {
+        margin-bottom: 1rem; } }
+  .login__social-link .icon-text {
+    display: none; }
+  .login__social-link .icon {
+    padding: 0 1rem; }
+  @media screen and (min-width: 48em) {
+    .login__social-link {
+      display: flex;
+      align-items: center;
+      width: 100%; }
+      .login__social-link:not(:last-child) {
+        margin-bottom: var(--mb-3); }
+      .login__social-link .icon-text {
+        display: inline-block;
+        color: white; } }
+  .login__social-link:not(:last-child) {
+    margin-right: var(--mb-2); }
+  .login__social-link i {
+    color: white; }
+  .login__social-link:nth-of-type(1) {
+    background-color: var(--color-blue-facebook); }
+  .login__social-link:nth-of-type(2) {
+    background-color: var(--color-blue-twitter); }
+  .login__social-link:nth-of-type(3) {
+    background-image: linear-gradient(var(--color-gradient-insta)); }
+
+.login__head {
+  padding: 2rem 0;
+  text-align: center; }
+  @media screen and (min-width: 48em) {
+    .login__head {
+      display: flex;
+      gap: 1rem; } }
+  .login__head a {
+    width: 100%;
+    display: block;
+    text-transform: uppercase;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--color-blue);
+    padding: 0.3rem 0;
+    border-bottom: 2px solid var(--color-dark); }
+    @media screen and (max-width: 48em) {
+      .login__head a:not(:last-of-type) {
+        margin-bottom: 1.5rem; } }
+    .login__head a:nth-of-type(1) {
+      border-bottom: 2px solid var(--color-blue); }
+
+.login__form {
+  padding: 1rem 0; }
+  .login__form input:not(input[type="checkbox"]) {
+    font-size: var(--small-font-size);
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--color-dark-2);
+    margin-top: 1rem; }
+
+.login__password {
+  position: relative; }
+
+.login__showpass {
+  display: block;
+  position: absolute;
+  top: 1.7rem;
+  right: 0; }
+
+.login__checkbox {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1;
+  padding: 2rem 0.2rem; }
+  @media screen and (max-width: 320px) {
+    .login__checkbox {
+      text-align: center;
+      flex-direction: column;
+      gap: 1rem; } }
+  .login__checkbox input[type="checkbox"] {
+    margin-right: var(--mb-1); }
+  .login__checkbox:nth-child(1) {
+    margin-right: auto; }
+
+.login__forgot {
+  color: var(--color-blue); }
+
+.col {
+  width: 100%; }
+  @media screen and (min-width: 960px) {
+    .col {
+      max-width: 35vw; } }
+
+.col-1 {
+  background-color: var(--color-primary); }
+
+.col-2 {
+  background-color: #fff;
+  padding: 1rem 2rem; }
+
+/*Button*/
+.button {
+  width: 100%;
+  padding: 0.625rem 1rem;
+  color: #fff;
+  background-color: var(--color-blue);
+  font-size: 1.125rem;
+  border: none;
+  outline: none;
+  border-radius: 0.3rem;
+  transition: 0.3s; }
+  .button:hover {
+    transform: translateY(-3px); }
+  .button:active {
+    transform: translate(0); }
